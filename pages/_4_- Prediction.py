@@ -12,7 +12,7 @@ st.title("Tasación")
 opcion_entrada = st.radio("Selecciona opción:", ("Subir CSV", "Introducir manualmente"))
 df_input = pd.DataFrame()
 
-with open("models/modelo_entrenado.pkl", "rb") as f:
+with open("modelo.pkl", "rb") as f:
     modelo, columnas = pickle.load(f)
 
     if opcion_entrada == "Subir CSV":
